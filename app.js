@@ -97,7 +97,7 @@ console.log(player.name);
 player.sayHello("Lynn");
 player.sayHello("nico"); */
 
-
+/*
 const calculator = {
     plus : function (a, b) {
         return (a+b);
@@ -127,7 +127,90 @@ console.log(divideResult);;
 const powerResult = calculator.power(2,3);
 console.log(powerResult); 
 
-function calculaterKrAge(agrOfForeigner) {
-    return agrOfForeigner +divide
-  
+// 조건문
+// 나이 계산기 만들기 
+const age = prompt("몇 살이세요?");
+// 사용자가 어떤 값을 입력하더라도 숫자로 변환할 필요가 있음. 
+// String이면 숫자를 비교할 수 없기 때문에! 
+
+//console.log(age, parseInt(age)); 
+// typeof 어떤 데이터 타입인지 확인하는 메소드
+
+//inNaN 판별하기 
+console.log(isNaN(age)); // 숫자가 아니면 true, 숫자면 false\
+
+if(isNaN(age)) {
+    console.log("숫자로 입력하세요.");
+} else if(age <18) {
+    console.log("19세 이상만 주류 구매할 수 있습니다.");
+} else if(age >= 18 && age<= 50) {
+    console.log("주류 구매 가능하십니다."); 
+} else {
+    console.log("건강을 챙기세요.!");
+} */
+
+// 문서 객체 (Document Object)
+//document.title = "Hello From Js!";
+/*
+const title = document.getElementById("something");
+//console.dir(title);
+title.innerText = "Got you!";
+console.log(title.id);
+console.log(title.className); */
+
+const h1 = document.querySelector(".hello:first-child h1");
+ 
+/*console.log(title);
+title.innerText = "hello";
+title.style.color = "green"; */
+
+/*
+function handleMouseEnter() {
+    h1.innerText = "Mouse is here!";
 }
+
+function handleMouseLeave() {
+    h1.innerText = "Mouse is gone!";
+}
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy() {
+    alert("copier!");
+}
+
+function handleWindowOffLine() {
+    alert("SOS no WIFI");
+}
+
+function handleWindowOnLine() {
+    alert("ALL GOOD!");
+}*/
+
+function handleTitleClick() {
+    /*const currentColor = h1.style.color;
+    let newColor;
+    if(currentColor === "blue"){
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor; */
+
+    h1.classList.toggle("clicked");
+}
+
+h1.addEventListener("click", handleTitleClick);
+// hi.onclick = "handleTitleClick";
+
+
+/*
+h1.onmouseenter = handleMouseEnter;
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffLine);
+window.addEventListener("online", handleWindowOnLine); */
